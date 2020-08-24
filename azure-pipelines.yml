@@ -9,7 +9,7 @@ trigger:
 variables: 
   ## Add this under variables section in the pipeline
   azureSubscription: 'C&L Cross Service Content Team Testing'
-  appName: 'buildjava-test'
+  appName: 'pipelines-java'
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -28,7 +28,7 @@ steps:
     
 - task: AzureWebApp@1 # Add this at the end of your file
   inputs:
-    azureSubscription: <Azure service connection>
+    azureSubscription: $(azureSubscription)
     appType: webAppLinux
     appName: $(appName)
     package: $(System.ArtifactsDirectory)/**/*.zip
