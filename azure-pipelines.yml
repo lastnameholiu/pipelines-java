@@ -7,7 +7,6 @@ trigger:
 - master
 
 variables: 
-  ## Add this under variables section in the pipeline
   azureSubscription: 'C&L Cross Service Content Team Testing'
   appName: 'pipelines-java'
 
