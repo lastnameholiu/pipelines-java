@@ -6,6 +6,11 @@
 trigger:
 - master
 
+variables: 
+  ## Add this under variables section in the pipeline
+  azureSubscription: 'C&L Cross Service Content Team Testing'
+  appName: 'buildjava-test'
+
 pool:
   vmImage: 'ubuntu-latest'
 
@@ -20,3 +25,10 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+    
+- task: AzureWebApp@1 # Add this at the end of your file
+  inputs:
+    azureSubscription: <Azure service connection>
+    appType: webAppLinux
+    appName: $(appName)
+    package: $(System.ArtifactsDirectory)/**/*.zip
