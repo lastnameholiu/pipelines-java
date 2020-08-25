@@ -21,3 +21,5 @@ steps:
     appType: webAppLinux
     appName: $(appName)
     package: $(System.ArtifactsDirectory)/**/*.zip
+
+- task: PublishBuildArtifacts@1
