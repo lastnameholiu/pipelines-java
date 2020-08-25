@@ -7,7 +7,7 @@ trigger:
 - master
 
 variables: 
-  azureSubscription: C&L Cross Service Content Team Testing
+  azureSubscription: alholiu-serviceconnection
   appName: alholiu-webapps
 
 pool:
