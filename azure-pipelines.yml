@@ -8,7 +8,7 @@ trigger:
 
 variables: 
   azureSubscription: alholiu-serviceconnection
-  appName: Hello world sample web app
+  appName: Hello World Web Application
 
 pool:
   vmImage: 'ubuntu-latest'
