@@ -8,7 +8,7 @@ trigger:
 
 variables: 
   azureSubscription: alholiu-serviceconnection
-  appName: pipelines-java
+  appName: alholiu-webapps
 
 pool:
   vmImage: 'ubuntu-latest'
