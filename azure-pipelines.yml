@@ -23,3 +23,5 @@ steps:
     package: $(System.ArtifactsDirectory)/**/*.zip
 
 - task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
