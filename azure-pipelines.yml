@@ -14,6 +14,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- task: PublishBuildArtifacts@1
     
 - task: AzureWebApp@1
   inputs:
@@ -21,7 +22,3 @@ steps:
     appType: webAppLinux
     appName: $(appName)
     package: $(System.ArtifactsDirectory)/**/*.zip
-
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
