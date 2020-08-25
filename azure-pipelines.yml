@@ -7,8 +7,8 @@ trigger:
 - master
 
 variables: 
-  azureSubscription: 'C&L Cross Service Content Team Testing'
-  appName: 'Hello world sample web app'
+  azureSubscription: C&L Cross Service Content Team Testing
+  appName: Hello world sample web app
 
 pool:
   vmImage: 'ubuntu-latest'
